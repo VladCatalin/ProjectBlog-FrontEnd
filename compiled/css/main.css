@@ -70,7 +70,7 @@ body {
   font-size: 25px;
 }
 .navbar-nav li a {
-  padding: 15px 33px;
+  padding: 15px 30px;
 }
 .navbar-ch a {
   font-family: 'Open Sans', sans-serif;
@@ -146,6 +146,10 @@ body {
   margin: 10px;
   position: relative;
 }
+.wrapper ul {
+  margin: 0;
+  padding: 0;
+}
 h1.titleArticle {
   font-size: 30px;
   font-weigth: Bold;
@@ -157,12 +161,12 @@ h1.titleArticle {
   align: left;
   box-shadow: 7px 7px 12px #444444;
 }
-.articleWrap {
+li.articleWrap {
   position: relative;
   margin: 0;
-  float: left;
   min-width: 200px;
   display: block;
+  overflow: hidden;
 }
 .moreDetail {
   display: block;
