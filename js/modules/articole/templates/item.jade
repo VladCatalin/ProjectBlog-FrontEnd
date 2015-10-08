@@ -1,8 +1,16 @@
-img.postPhotos(src="./static/post1.jpg", align="left")
+img.postPhotos(src!="<%= model.url_image %>", align="left")
 h1.titleArticle
     <%- model.title %>
 .description
     <%- model.description %>
-    a.moreDetail(href="#")
-      button.moreDetailButton(data-action="bea")
+.moreDetail(href="#")
+    <%- createDate() %>
+    a(href!='#show-article/<%- model.id %>')
+        button.moreDetailButton(data-action="bea")
           | Citeste mai mult...
+    a(href!='#update-article/<%- model.id %>')
+        button.ButtonEdit(data-action="bea")
+            | Edit
+
+    button.ButtonDel(data-action="bea")
+        | Delete

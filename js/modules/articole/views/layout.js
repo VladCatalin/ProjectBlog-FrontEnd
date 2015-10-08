@@ -8,7 +8,7 @@ define(function(require, exports, module) {
 
 
     module.exports = Marionette.ItemView.extend({
-        id: 'articles',
+        id: 'articole',
         template: '#articole-layout'
 
         , initialize: function(){
@@ -19,10 +19,10 @@ define(function(require, exports, module) {
             var collectionView = new ItemCollectionView({collection:this.collection});
 
             this.collection.fetch().then(function(){
-                self.$el.find('.articleWrap').html(collectionView.render().$el);
+                self.$el.find('.left-contain').html(collectionView.render().$el);
             })
+        },
 
-        }
     });
 
 
