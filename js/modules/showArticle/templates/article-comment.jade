@@ -1,0 +1,10 @@
+.commentId
+    | Comment with ID : <%- model.id %> (<%= createDate() %>)
+.commentContent
+    <%- model.content %>
+.CommentButtons
+    button#ButtonDelComment(data-action="bea")
+        | Delete
+    a(href!='#show-article/<%- model.articleId %>/update-comment/<%- model.id %>')
+        button#ButtonEditComment(data-action="bea")
+            | Edit

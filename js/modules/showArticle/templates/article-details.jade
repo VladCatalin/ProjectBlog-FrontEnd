@@ -1,0 +1,10 @@
+.article-details
+    img.postPhotosArticle(src!="<%= model.url_image %>", align="right")
+    h1.titleShowArticle
+       <%- model.title %>
+    .contentShowArticle
+        <%- model.content %>
+        #show-addComReg
+            a(href!='#show-article/<%- model.id %>/create-comment/')
+                button#AddNewComment(data-action="bea")
+                    | Add New Comment

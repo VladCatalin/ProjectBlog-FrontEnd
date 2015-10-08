@@ -1,0 +1,28 @@
+#formContent.col-md-6
+   h2.titleForm
+      | Update Article Model
+
+   .input-group
+      input#updateTitle.text.form-control(value!="<%= model.title %>" aria-describedby="basic-addon1")
+      |Titlu Articol
+   br
+   .input-group
+      |Descriere Articol
+      textarea#updateDescription.text.form-control(aria-describedby="basic-addon1")
+            <%- model.content %>
+   br
+   .input-group
+      |Content Articol
+      textarea#updateContent.text.form-control(aria-describedby="basic-addon1")
+            <%- model.content %>
+   br
+   .input-group
+      |URL Imagine
+      input#updateUrl.text.form-control(value!="<%= model.url_image %>" aria-describedby="basic-addon1")
+
+   br
+   button#saveButton.btn.btn-default
+      | Update Article
+
+   button.ButtonDel.btn.btn-default(data-action="bea")
+      | Delete
